@@ -1,1 +1,3 @@
-# features2
+We implement a fast feature points‐based object tracking method for robot grasp. In the detection phase, we detect the object with SIFT feature points extraction and matching. Then we compute the object’s image position with homography constraints and set up an interest window to accommodate the object. In the tracking phase, we only focus on the interest window, detecting feature points from the window and updating the window’s position
+and size. 
+When the robot grasps the object, the object’s image size is usually small relative to the whole image, therefore, it is unnecessary to detect the whole image. On the other hand, the object is partially occluded by the robot gripper. SIFT is good at dealing with occlusion, but it is time consuming. Hence, by combining SIFT and an interest window, our method gains the ability to deal with occlusion and can satisfy the real‐time requirements at the same time.
